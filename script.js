@@ -28,6 +28,9 @@ function showSuggestions(results, inputVal) {
 		newSuggest.innerText = item;
 		suggestions.appendChild(newSuggest);
 	}
+	if (inputVal === ""){
+		suggestions.innerHTML = "";
+	}
 	//select all of the options
 
 }
