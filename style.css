@@ -1,21 +1,31 @@
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
-:focus {
- /* TODO */
+input:focus {
+ background: orange;
+ border: none;
 }
 
 body {
-  /* TODO */
+  background: linear-gradient(45deg, gold, orangered);
+  /* using flexbox to center the searchbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ensures body takes up entire viewheight */
+  height: 100vh;
 }
 
 input {
- /* TODO */
+ background: orange;
+ outline:none;
 }
 
 .search-container {
- /* TODO */
+  position: absolute;
+
+
 }
 .search-container input,
 .search-container .suggestions {

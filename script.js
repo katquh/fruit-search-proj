@@ -1,4 +1,5 @@
 const input = document.querySelector('#fruit');
+input.focus();
 const suggestions = document.querySelector('.suggestions ul');
 
 
@@ -24,7 +25,7 @@ function showSuggestions(results, inputVal) {
 	suggestions.innerHTML="";
 	
 	for (let item of results){
-		let newSuggest = document.createElement("option");
+		let newSuggest = document.createElement("li");
 		newSuggest.innerText = item;
 		suggestions.appendChild(newSuggest);
 	}
@@ -40,7 +41,7 @@ function useSuggestion(e) {
 }
 
 function highlightSuggestion(e){
-	e.target.style.background = "gray";
+	e.target.style.background = "orangered";
 
 }
 
