@@ -24,7 +24,8 @@ function showSuggestions(results, inputVal) {
 	for (let item of results){
 		let newSuggest = document.createElement("li");
 		//to bold portion of the suggestion that contains input string
-		newItem = item.replace(inputVal, '<b>' + inputVal + '</b>');
+		const regEx = new RegExp(inputVal,"ig");
+		newItem = item.replace(regEx,'<b>$&</b>');
 		newSuggest.innerHTML = newItem;
 		suggestions.appendChild(newSuggest);
 
